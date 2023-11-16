@@ -1,0 +1,40 @@
+{
+  "name": "self-discord",
+  "version": "2.0.21",
+  "description": "This package was made to annoy users in discord, Made it because people kept asking for it.",
+  "main": "inedx.js",
+  "bin": {
+    "sphinx-run": "bin/cli.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "semantic-release": "semantic-release --branches",
+    "commit": "git-cz"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/selfdiscc/self-discord.git"
+  },
+  "keywords": [
+    "discord"
+  ],
+  "bugs": {
+    "url": "https://github.com/selfdiscc/self-discord/issues"
+  },
+  "homepage": "https://github.com/selfdiscc/self-discord#readme",
+  "author": "selfdiscc",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "@discordjs/builders": "^1.1.0",
+    "axios": "^0.27.2"
+  },
+  "devDependencies": {
+    "cz-conventional-changelog": "^3.3.0",
+    "semantic-release": "^20.0.2"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
